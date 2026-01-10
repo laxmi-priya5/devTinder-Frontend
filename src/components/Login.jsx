@@ -40,7 +40,7 @@ const Login = ()=>{
         try{
              const res = await axios.post(BASE_URL+'/signup',{firstName,lastName,emailId,password},{withCredentials:true})
              dispatch(addUser(res.data.data))
-            return navigate('/profile');
+            return navigate('profile');
         }catch(err){
           console.error(err?.res?.data)
            setErr(err?.response?.data || "Something went wrong");
