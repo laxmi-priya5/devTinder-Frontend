@@ -40,8 +40,9 @@ const Navbar = () => {
       <p className='font-bold'>Welcome , {user.firstName}</p>
       <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
         <div className="w-10 rounded-full hover:ring-2 hover:ring-blue-400 cursor-pointer
-          animate-[pulseScale_3s_ease-in-out_infinite]
-          hover:animate-none">
+          btn btn-ghost 
+    animate-[glowPulse_2.5s_ease-in-out_infinite]
+    hover:animate-none">
           {user.photoURL ?<img
             alt="profile"
              src={user.photoURL} />:<img
