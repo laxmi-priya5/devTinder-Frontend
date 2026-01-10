@@ -39,7 +39,9 @@ const Navbar = () => {
     {user && <div className="dropdown dropdown-end mx-5 flex gap-1.5">
       <p className='font-bold'>Welcome , {user.firstName}</p>
       <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-        <div className="w-10 rounded-full hover:ring-2 hover:ring-blue-400">
+        <div className="w-10 rounded-full hover:ring-2 hover:ring-blue-400 cursor-pointer
+          animate-[pulseScale_3s_ease-in-out_infinite]
+          hover:animate-none">
           {user.photoURL ?<img
             alt="profile"
              src={user.photoURL} />:<img
@@ -51,9 +53,7 @@ const Navbar = () => {
         tabIndex="-1"
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
         <li>
-          <Link to='profile' className="justify-between cursor-pointer
-          animate-[pulseScale_3s_ease-in-out_infinite]
-          hover:animate-none">
+          <Link to='profile' className="justify-between ">
             Profile
             <span className="badge">View</span>
           </Link>
