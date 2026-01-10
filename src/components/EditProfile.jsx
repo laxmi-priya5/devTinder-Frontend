@@ -65,8 +65,8 @@ const EditProfile = ({user}) => {
     <input type="text" className="input w-full" placeholder={age} value={age} onChange={(e)=>setAge(e.target.value)}/>
     <label className="label">About</label>
     <input type='text' className="input w-full" placeholder={about} value={about} onChange={(e)=>setAbout(e.target.value)}></input>
-    <label className="label" placeholder=' url...'>Photo url</label>
-    <input type="text" className="input w-full" placeholder={photo} value={photo} onChange={(e)=>setPhoto(e.target.value)}/>
+    <label className="label" >Photo url</label>
+    <input type="text" className="input w-full" placeholder='post url' value={photo} onChange={(e)=>setPhoto(e.target.value)}/>
     
       <button className="btn btn-primary text-xl" onClick={saveEdit}>save</button>
     
