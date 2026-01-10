@@ -51,7 +51,9 @@ const Navbar = () => {
         tabIndex="-1"
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
         <li>
-          <Link to='profile' className="justify-between ">
+          <Link to='profile' className="justify-between cursor-pointer
+    animate-[pulseScale_3s_ease-in-out_infinite]
+    hover:animate-none">
             Profile
             <span className="badge">View</span>
           </Link>
