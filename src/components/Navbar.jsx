@@ -14,13 +14,13 @@ const Navbar = () => {
 
   const handleLogout = async()=>{
      try{
-         await axios.post(BASE_URL+'/logout' , {} , {
+         await axios.post(BASE_URL+'logout' , {} , {
            withCredentials:true
          })
 
          // remove user from redux
          dispatch(removeUser());
-         return navigate('/login');
+         return navigate('login');
          
      }
      catch(err){

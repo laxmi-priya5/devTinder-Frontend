@@ -23,7 +23,7 @@ const Body = () => {
       dispatch(addUser(res.data));
     }catch(err){
        if(err.status === 401){  // if token is not valid or expired
-        navigate('/login')
+        navigate('login')
        }
     }
     
