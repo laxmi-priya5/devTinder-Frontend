@@ -1,14 +1,27 @@
-@keyframes glowPulse {
+@keyframes pulseScale {
   0% {
     transform: scale(1);
-    text-shadow: 0 0 0 rgba(59, 130, 246, 0.4);
   }
   50% {
-    transform: scale(1.05);
-    text-shadow: 0 0 10px rgba(59, 130, 246, 0.6);
+    transform: scale(1.06);
   }
   100% {
     transform: scale(1);
-    text-shadow: 0 0 0 rgba(59, 130, 246, 0.4);
   }
 }
+
+@keyframes avatarPulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4);
+  }
+  50% {
+    transform: scale(1.08);
+    box-shadow: 0 0 0 6px rgba(59, 130, 246, 0.15);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4);
+  }
+}
+

@@ -39,10 +39,11 @@ const Navbar = () => {
     {user && <div className="dropdown dropdown-end mx-5 flex gap-1.5">
       <p className='font-bold'>Welcome , {user.firstName}</p>
       <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-        <div className="w-10 rounded-full hover:ring-2 hover:ring-blue-400 cursor-pointer
-          btn btn-ghost 
-    animate-[glowPulse_2.5s_ease-in-out_infinite]
-    hover:animate-none">
+        <div className="w-10 rounded-full cursor-pointer
+        animate-[avatarPulse_2.5s_ease-in-out_infinite]
+        hover:animate-none
+        hover:ring-2 hover:ring-blue-400
+        transition-all">
           {user.photoURL ?<img
             alt="profile"
              src={user.photoURL} />:<img
