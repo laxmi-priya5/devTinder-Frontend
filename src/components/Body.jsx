@@ -17,7 +17,7 @@ const Body = () => {
   const fetchUser = async()=>{
     if(user) return ;   // you are not refreshing yet
     try{
-        const res = await api.get(BASE_URL + '/profile/view',   // after refresh again het it through profile /view 
+        const res = await axios.get(BASE_URL + 'profile/view',   // after refresh again het it through profile /view 
       {withCredentials:true}
       );
     
