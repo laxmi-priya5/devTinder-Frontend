@@ -10,6 +10,7 @@ import Feed from './components/Feed'
 import { BrowserRouter,Routes , Route } from 'react-router-dom'
 import Connections from './components/Connections'
 import Request from './components/Request'
+import ProtectedRoute from './components/ProtectedRoute'
 function App() {
 
 
