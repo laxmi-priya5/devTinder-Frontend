@@ -8,6 +8,7 @@ import { useDispatch } from 'react-redux'
 import {addUser} from '../utils/userSlice'
 import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
+import api from '../utils/api'
 const Body = () => {
   
   const dispatch = useDispatch();
@@ -16,7 +17,7 @@ const Body = () => {
   const fetchUser = async()=>{
     if(user) return ;   // you are not refreshing yet
     try{
-        const res = await axios.get(BASE_URL + '/profile/view',   // after refresh again het it through profile /view 
+        const res = await api.get(BASE_URL + '/profile/view',   // after refresh again het it through profile /view 
       {withCredentials:true}
       );
     
