@@ -20,7 +20,7 @@ const Login = ()=>{
     const handleLogin = async ()=>{
         try{
         
-           const response = await axios.post(BASE_URL+"/login",{
+           const response = await axios.post(BASE_URL+"login",{
                 emailId,
                 password
             },{withCredentials:true})
