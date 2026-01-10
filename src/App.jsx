@@ -18,13 +18,20 @@ function App() {
   
   <BrowserRouter basename='/'>
   <Routes>
-    <Route path='/' element={<Body/>}>
-      <Route index element={<Feed/>}/>        // 👈 default child
-      <Route path='login' element={<Login/>}/>  // 👈 nested incorrectly
-      <Route path='profile' element={<Profile/>}/>
-      <Route path='connections' element={<Connections/>}/>
-      <Route path='request' element={<Request/>}/>
-    </Route>
+    <Route path="/" element={<Body/>}>
+  <Route
+    index
+    element={
+      <ProtectedRoute>
+        <Feed />
+      </ProtectedRoute>
+    }
+  />
+  <Route path="login" element={<Login />} />
+  <Route path="profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
+  <Route path="connections" element={<ProtectedRoute><Connections /></ProtectedRoute>} />
+  <Route path="request" element={<ProtectedRoute><Request /></ProtectedRoute>} />
+</Route>
   </Routes>
 </BrowserRouter>
 
