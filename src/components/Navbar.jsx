@@ -30,7 +30,10 @@ const Navbar = () => {
     return (
     <div className="navbar bg-base-300 shadow-sm">
   <div className="flex-1">
-    <Link to='/' className="btn btn-ghost text-xl hover:text-blue-500" onMouseEnter={<p className='text-white'>Click me</p>}>devTinder</Link>
+    <Link to='/' className="btn btn-ghost text-xl font-bold text-blue-600
+    cursor-pointer
+    animate-[pulseScale_2s_ease-in-out_infinite]
+    hover:animate-none" onMouseEnter={<p className='text-white'>Click me</p>}>devTinder</Link>
   </div>
   <div className="flex gap-2">
     {user && <div className="dropdown dropdown-end mx-5 flex gap-1.5">
