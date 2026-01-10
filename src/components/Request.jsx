@@ -10,7 +10,7 @@ const Request = () => {
     const dispatch = useDispatch();
     const request = useSelector(store=>store.connectionRequest)
     const fetchRequest = async()=>{
-          const connRequest = await axios.get(BASE_URL+'user/request/received' , {withCredentials:true})
+          const connRequest = await axios.get(BASE_URL+'/user/request/received' , {withCredentials:true})
 
           dispatch(addRequest(connRequest.data.data));
 

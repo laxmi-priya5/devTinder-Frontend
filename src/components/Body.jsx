@@ -16,14 +16,14 @@ const Body = () => {
   const fetchUser = async()=>{
     if(user) return ;   // you are not refreshing yet
     try{
-        const res = await axios.get(BASE_URL + 'profile/view',   // after refresh again het it through profile /view 
+        const res = await axios.get(BASE_URL + '/profile/view',   // after refresh again het it through profile /view 
       {withCredentials:true}
       );
     
       dispatch(addUser(res.data));
     }catch(err){
        if(err.status === 401){  // if token is not valid or expired
-        navigate('login')
+        navigate('/login')
        }
     }
     

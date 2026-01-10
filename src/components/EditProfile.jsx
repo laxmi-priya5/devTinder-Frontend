@@ -20,7 +20,7 @@ const EditProfile = ({user}) => {
     const saveEdit = async()=>{
         try{
            
-            const response = await axios.patch(BASE_URL+"profile/edit" , 
+            const response = await axios.patch(BASE_URL+"/profile/edit" , 
             {
                 firstName,   // here i can write firstName(key):FirstName(value) but key must be same in backend if i only write like firstName then that act as key and data in side that act as value
                 lastName,
