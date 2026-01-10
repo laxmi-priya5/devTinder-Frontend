@@ -11,7 +11,7 @@ const RequestCard = ({user}) => {
     const handleClick = async(status,id)=>{
         // console.log(BASE_URL+'/request/review/'+status+"/"+id)
         try{
-            const requestReview = await axios.post(BASE_URL+'/request/review/'+status+"/"+id , {},{withCredentials:true})
+            const requestReview = await axios.post(BASE_URL+'request/review/'+status+"/"+id , {},{withCredentials:true})
             dispatch(removeRequest(id));
 
         }catch(err){
